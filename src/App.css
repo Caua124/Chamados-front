@@ -1,0 +1,292 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #243247;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #123b65, #1769aa);
+  color: white;
+  padding: 28px 5%;
+  text-align: left;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+header p {
+  margin: 0;
+  color: #e2edfa;
+}
+
+.barra-navegacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 5%;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.barra-navegacao a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #234e70;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.barra-navegacao a:hover {
+  background: #eaf2f9;
+  color: #1769aa;
+}
+
+main {
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 0 24px 40px;
+}
+
+h2 {
+  color: #123b65;
+}
+
+.pagina-listagem h2 {
+  color: #123b65;
+}
+
+.pagina-cadastro h2 {
+  color: #123b65;
+}
+
+.pagina-detalhes h2 {
+  color: #123b65;
+}
+
+h3 {
+  color: #234e70;
+}
+
+.pagina-inicial,
+.pagina-listagem,
+.pagina-cadastro,
+.pagina-detalhes {
+  background: white;
+  padding: 32px;
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(20, 50, 80, 0.06);
+}
+
+.pagina-inicial h2 {
+  color: #123b65;
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+
+.pagina-inicial p {
+  color: #526174;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.acoes-iniciais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.acoes-iniciais a,
+.acoes-listagem a {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 7px;
+  background: #1769aa;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.acoes-iniciais a:hover,
+.acoes-listagem a:hover {
+  background: #104d80;
+}
+
+.acoes-listagem {
+  margin: 22px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 720px;
+}
+
+form label,
+.pagina-detalhes label {
+  margin-top: 8px;
+  color: #334155;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: white;
+  color: #243247;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #1769aa;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+button {
+  width: fit-content;
+  margin-top: 12px;
+  padding: 12px 19px;
+  border: none;
+  border-radius: 7px;
+  background: #1769aa;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 12px;
+}
+
+button:hover {
+  background: #104d80;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 15px 13px;
+  text-align: left;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+th {
+  background: #eaf2f9;
+  color: #123b65;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+td a {
+  color: #1769aa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mensagem-erro {
+  margin: 0 0 22px;
+  padding: 15px 18px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff1f2;
+  color: #b42318;
+}
+
+.pagina-detalhes p {
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 24px;
+  }
+
+  header h1 {
+    font-size: 23px;
+  }
+
+  .barra-navegacao {
+    padding: 12px;
+    gap: 4px;
+  }
+
+  .barra-navegacao a {
+    padding: 10px;
+  }
+
+  main {
+    margin: 22px auto;
+    padding: 0 12px 30px;
+  }
+
+  .pagina-inicial,
+  .pagina-listagem,
+  .pagina-cadastro,
+  .pagina-detalhes {
+    padding: 20px;
+  }
+
+  .pagina-inicial h2 {
+    font-size: 23px;
+  }
+
+  .acoes-iniciais {
+    flex-direction: column;
+  }
+
+  .acoes-iniciais a {
+    text-align: center;
+  }
+
+  .pagina-listagem {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}
